@@ -1,0 +1,2168 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>19.8. What is fMRI Data? &#8212; NeuroTech Textbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Chapter_05/NMEP_Sp23_fMRI_Lab';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="19.4. 5.2. Preprocessing" href="5.2-Preprocessing.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/sp22_ugarte_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/sp22_ugarte_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Data 140
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="http://postybaloney.github.io">Course Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NMEP_ToStudent.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_01/1-Intro.html">1. What is Neurotechnology?</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.1-RelevantTech.html">1.1. 1.1 Electrodes</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.2-CurrentProjects.html">1.4. 1.2 Current Projects</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.3-EthicalConcerns.html">1.8. 1.2 Ethical Concerns</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.4-TechnologyInvolved.html">1.11. 1.4 What Kinds of Technology is Involved?</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.5-ProblemSolved.html">1.17. What Problems is Neurotech Trying to Solve?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_02/2.2-TheNervoussystem.html">2. 2.1 The Nervous System</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_02/2.3-ActionPotential.html">7. Images go here</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_02/Python_Introduction.html">8. <strong>Python Primer</strong></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_03/3.5-Learning%2BMemory.html">16. images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_03/Neuron_Simulations_NMEP_Sp23.html">17. <strong>Intro Python and Single Neuron Models</strong></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_04/00_Relations_Between_Variables.html">18. Relations Between Variables</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/01_Joint_Distributions.html">18.1. Joint Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/02_Examples.html">18.2. Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/03_Marginal_Distributions.html">18.3. Marginal Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/04_Conditional_Distributions.html">18.4. Conditional Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/05_Dependence_and_Independence.html">18.5. Dependence and Independence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/06_Exercises.html">18.6. Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5-EEG.html">19. 5. EEG</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="5.1-BrainWaves.html">19.1. 5.1. Brain Waves</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="5.2-Preprocessing.html">19.4. 5.2. Preprocessing</a></li>
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">19.8. <strong>What is fMRI Data?</strong></a></li>
+
+
+
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://prob140.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A//https%3A//github.com/postybaloney/textbook&urlpath=tree/textbook/content/Chapter_05/NMEP_Sp23_fMRI_Lab.ipynb&branch=gh-pages" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/Chapter_05/NMEP_Sp23_fMRI_Lab.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>What is fMRI Data?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">19.8. <strong>What is fMRI Data?</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#real-fmri-datasets">19.9. Real fMRI Datasets</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#d-fmri-data-manipulation">19.10. 4D fMRI Data Manipulation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-an-fmri-dataset">19.11. Visualizing an FMRI Dataset</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="what-is-fmri-data">
+<h1><span class="section-number">19.8. </span><strong>What is fMRI Data?</strong><a class="headerlink" href="#what-is-fmri-data" title="Permalink to this heading">#</a></h1>
+<p>Welcome to the fMRI lab! We will be diving into fMRI data using Python/data science concepts. If you need to review these topics, please go over the optional Python Primer before starting this lesson.</p>
+<p>To begin, we will introduce what fMRI data consists of and how it’s represented, and start looking at some sample fMRI data.</p>
+<p>*PLEASE DO NOT EDIT THIS DOCUMENT, MAKE YOUR OWN COPY TO EDIT</p>
+<p>#What does fMRI data look like?</p>
+<p>In general, fMRI images are stored in the form of DICOM (Digital Imaging and Communications in Medicine) files. This format is used for medical images like Ultrasound or MRI/fMRI and can also contain patient identification information.</p>
+<p>Oftentimes, for fMRI data analysis specifically, these DICOM files are converted into NIfTI files using <code class="docutils literal notranslate"><span class="pre">dicomnifti</span></code>. NIfTI stands for Neuroimaging Informatics Technology Initiative and the file formate was developed by the NIfTI Data Format Working Group to “facilitate inter-operation of functional MRI data analysis software packages.”</p>
+<p>So how do you use these files? We will be using a python package called <code class="docutils literal notranslate"><span class="pre">nibabel</span></code> that can read these specific neuroimaging file formats (you can read more about it <a class="reference external" href="https://nipy.org/nibabel/gettingstarted.html">here</a>). First, import the module by running the cell below (shift + Enter).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nibabel</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">nibabel</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;nibabel&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, let’s take a look at an example fMRI image. Import the <code class="docutils literal notranslate"><span class="pre">data_path</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nibabel.testing</span> <span class="kn">import</span> <span class="n">data_path</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>I have specified the example image filepath for you, so just run the cell below.</p>
+<p>Tip: Use <code class="docutils literal notranslate"><span class="pre">os.path.join</span></code> to join directory paths with filenames.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="s1">&#39;example4d.nii.gz&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, load the image using <code class="docutils literal notranslate"><span class="pre">nibabel.load</span></code>. When you call <code class="docutils literal notranslate"><span class="pre">img</span></code>, it should output the data type of the NIfTI image!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">nibabel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+<span class="n">img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;nibabel.nifti1.Nifti1Image at 0x7f97ad41ba30&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, <code class="docutils literal notranslate"><span class="pre">img</span></code> is an instance of Nifti1Image. This object doesn’t actually directly store the actual fMRI data, but rather contains infomation about the fMRI data stored in the file which can be accessed by using attributes of the object.</p>
+<p>For example, let’s look at the shape of the object using the <code class="docutils literal notranslate"><span class="pre">.shape</span></code> method:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(128, 96, 24, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we can see the shape is the image is in 4 dimensions: (X, Y, Z, T) where X, Y, and Z make up 3D space and T is time. So, this image has 2 time points each consisting of 24 horizontal slices that are 128 x 96 pixels in area.</p>
+<p>Now, you can fetch the array data using the <code class="docutils literal notranslate"><span class="pre">.get_fdata()</span></code> method and run the cell below to look at the data type, shape, and array (which should just be an empty array).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Apply the .get_fdata() method to img and run cell to fetch array data into cache</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data type: &#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data shape: &#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data type:  float64
+data shape:  (128, 96, 24, 2)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        ...,
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]]],
+
+
+       [[[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        ...,
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]]],
+
+
+       [[[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        ...,
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]]],
+
+
+       ...,
+
+
+       [[[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        ...,
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]]],
+
+
+       [[[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        ...,
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]]],
+
+
+       [[[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        ...,
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]],
+
+        [[0., 0.],
+         [0., 0.],
+         [0., 0.],
+         ...,
+         [0., 0.],
+         [0., 0.],
+         [0., 0.]]]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The array data associated with this example image is a 4-dimensional empty array, as desired. Now we can check to make sure the array data has been fetched into this image using the <code class="docutils literal notranslate"><span class="pre">.in_memory</span></code> method:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Apply the .in_memory method to img and run cell to check if array data is in cache (should return True)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">in_memory</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yay it worked! You can also <code class="docutils literal notranslate"><span class="pre">uncache</span></code> array data. Feel free to play around with this file format!</p>
+<p>Another way to look at image metadata is through the <code class="docutils literal notranslate"><span class="pre">header</span></code> attribute. The header of an image contains information on the image that can be accessed through get methods. Let’s take a look at this example image’s header:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">header</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;nibabel.nifti1.Nifti1Header&#39;&gt; object, endian=&#39;&lt;&#39;
+sizeof_hdr      : 348
+data_type       : b&#39;&#39;
+db_name         : b&#39;&#39;
+extents         : 0
+session_error   : 0
+regular         : b&#39;r&#39;
+dim_info        : 57
+dim             : [  4 128  96  24   2   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.000000e+00  2.000000e+00  2.000000e+00  2.199999e+00  2.000000e+03
+  1.000000e+00  1.000000e+00  1.000000e+00]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 23
+slice_code      : unknown
+xyzt_units      : 10
+cal_max         : 1162.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : b&#39;FSL3.3\x00 v2.25 NIfTI-1 Single file format&#39;
+aux_file        : b&#39;&#39;
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : -1.9451068e-26
+quatern_c       : -0.9967085
+quatern_d       : -0.08106874
+qoffset_x       : 117.8551
+qoffset_y       : -35.722942
+qoffset_z       : -7.2487984
+srow_x          : [-2.0000000e+00  6.7147157e-19  9.0810245e-18  1.1785510e+02]
+srow_y          : [-6.7147157e-19  1.9737115e+00 -3.5552824e-01 -3.5722942e+01]
+srow_z          : [ 8.2554809e-18  3.2320762e-01  2.1710818e+00 -7.2487984e+00]
+intent_name     : b&#39;&#39;
+magic           : b&#39;n+1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are several easy commands that you can use to get specific attributes of this header. These are a couple examples and what they do:</p>
+<p><code class="docutils literal notranslate"><span class="pre">get_data_shape()</span></code> to get the output shape of the image data array (same as <code class="docutils literal notranslate"><span class="pre">img.shape</span></code> from earlier)</p>
+<p><code class="docutils literal notranslate"><span class="pre">get_data_dtype()</span></code> to get the numpy data type in which the image data is stored (or will be stored if you save the image)</p>
+<p><code class="docutils literal notranslate"><span class="pre">get_zooms()</span></code> to get the voxel sizes in millimeters</p>
+<p>Try out some of the common header get methods to take a look at more image details:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Shape of image data array</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">get_data_shape</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(128, 96, 24, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Numpy data type that image data is stored at</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">get_data_dtype</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int16
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Voxel size in millimeters</span>
+<span class="n">voxel_size</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">get_zooms</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">voxel_size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.0, 2.0, 2.199999, 2000.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#4th dimension of voxel_size is time between scans in milliseconds</span>
+<span class="n">voxel_size</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2000.0
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Transposing 4D fMRI Data</strong></p>
+<p>When working with fMRI data, it is actually more convenient for the data to be in (T, Z, Y, X) format (rather than (X, Y, Z, T)) for analysis. Thus, transposing the data is an important pre-processing step.</p>
+<p>To do this, we simply use the  <code class="docutils literal notranslate"><span class="pre">transpose()</span></code> command. Let’s try this on a simple 2D array first.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2D array of all zeros</span>
+<span class="n">arr_2D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Original array shape: </span><span class="si">{</span><span class="n">arr_2D</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">arr_2D</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original array shape: (2, 3)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 0., 0.],
+       [0., 0., 0.]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Transpose command</span>
+<span class="n">arr_2D_transposed</span> <span class="o">=</span> <span class="n">arr_2D</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Transposed array shape: </span><span class="si">{</span><span class="n">arr_2D_transposed</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">arr_2D_transposed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transposed array shape: (3, 2)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 0.],
+       [0., 0.],
+       [0., 0.]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, the array dimensions have been switched. You can also use the <code class="docutils literal notranslate"><span class="pre">T</span></code> method, which is a shortcut for <code class="docutils literal notranslate"><span class="pre">transpose</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#T command</span>
+<span class="n">arr_2D_transposed_2</span> <span class="o">=</span> <span class="n">arr_2D</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Transposed array shape: </span><span class="si">{</span><span class="n">arr_2D_transposed_2</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">arr_2D_transposed_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transposed array shape: (3, 2)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 0.],
+       [0., 0.],
+       [0., 0.]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now what about a 3D array?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#3D array of all zeroes</span>
+<span class="n">arr_3D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Original array shape: </span><span class="si">{</span><span class="n">arr_3D</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">arr_3D</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original array shape: (2, 4, 3)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.]],
+
+       [[0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.]]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>What do you think the transposed dimensions will be?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#T command</span>
+<span class="n">arr_3D_transposed</span> <span class="o">=</span> <span class="n">arr_3D</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Transposed array shape: </span><span class="si">{</span><span class="n">arr_3D_transposed</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">arr_3D_transposed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transposed array shape: (3, 4, 2)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.]],
+
+       [[0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.]],
+
+       [[0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.]]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tranposing the 3D array inverted the order of the original array dimensions! Now we can see how the <code class="docutils literal notranslate"><span class="pre">transpose</span></code> command can be used to transform fMRI data from (X, Y, Z, T) to the more useful format of (T, Z, Y, X). Let’s try it with the array data we fetched for the example image before:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Recall the empty 4D array of image data from before with shape:</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Original image data shape: </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original image data shape: (128, 96, 24, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Apply either transpose method to data, transposed data shape should be (2, 24, 96, 128)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">data_transposed</span> <span class="o">=</span> <span class="n">array1</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Transposed data shape: </span><span class="si">{</span><span class="n">data_transposed</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transposed data shape: (2, 24, 96, 128)
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you need any help with how to get this code to work, feel free to ask and we can work through it!</p>
+<p>So, as a summary: so far, we have learned how to use the python package <code class="docutils literal notranslate"><span class="pre">nibabel</span></code> to load fMRI images and datasets. Then we looked into an fMRI example image and used the <code class="docutils literal notranslate"><span class="pre">get_fdata()</span></code> method to fetch the 4D data array for the image and cache it in the image memory. We also explored some other attributes that contain more information about the image. Lastly, we talked about how to transpose the fMRI image data to invert the dimensions using the <code class="docutils literal notranslate"><span class="pre">.transpose()</span></code> and <code class="docutils literal notranslate"><span class="pre">.T</span></code> commands. This will become more important as we dive deeper into working with actual fMRI data.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="real-fmri-datasets">
+<h1><span class="section-number">19.9. </span>Real fMRI Datasets<a class="headerlink" href="#real-fmri-datasets" title="Permalink to this heading">#</a></h1>
+<p>Now, we will load and save an fMRI experimental dataset and take a deeper dive into masking, visualizing, and working with a dataset.</p>
+<p>First step is exploring the dataset: we will be using a subset of the data from the study <strong>Neural Processing of Emotional Musical and Nonmusical Stimuli in Depression</strong> from Lepping et al. 2017. We downloaded the data from public database <a class="reference external" href="http://openneuro.org">openneuro.org</a>, feel free to explore other datasets on their page!</p>
+<p><a class="reference external" href="https://openneuro.org/datasets/ds000171/versions/00001">https://openneuro.org/datasets/ds000171/versions/00001</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nibabel</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download data</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/neurotech-berkeley/neurotech-course/blob/master/module_3_fMRI_dataset/sub-control01/sub-control01_func_sub-control01_task-music_run-1_bold.nii?raw=true&#39;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sub-control01_func_sub-control01_task-music_run-1_bold.nii&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;sub-control01_func_sub-control01_task-music_run-1_bold.nii&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s take a look at the first image: a Never Depressed (ND or control) patient completing the music task.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">control01_music_img</span> <span class="o">=</span> <span class="n">nibabel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+<span class="n">control01_music_img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;nibabel.nifti1.Nifti1Image at 0x7f079405d640&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Just a tad underwhelming, I know. But now we can use some of the basic analytical skills we learned earlier to be able to visualize it!</p>
+<p>Let’s start by checking out the image shape:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Apply the .shape method to the image and run cell to look at the image shape</span>
+<span class="n">control01_music_img</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(80, 80, 50, 105)
+</pre></div>
+</div>
+</div>
+</div>
+<p>What does this mean again?</p>
+<p>The NIFTI image consists of 105 time points each containing 50 horizontal slices that are 80 x 80 pixels in area.</p>
+<p>Now let’s fetch the array data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Apply the .get_fdata() method to the image we loaded above and run cell to fetch the array data</span>
+<span class="n">control01_music_data</span> <span class="o">=</span> <span class="n">control01_music_img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>
+<span class="n">control01_music_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>memmap([[[[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          ...,
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.]],
+
+         [[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          ...,
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.]],
+
+         [[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          ...,
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.]],
+
+         ...,
+
+         [[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          ...,
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.]],
+
+         [[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          ...,
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.]],
+
+         [[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          ...,
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.],
+          [ 0.,  0.,  0., ...,  0.,  0.,  0.]]],
+
+
+        [[[40., 40., 35., ..., 31., 28., 37.],
+          [34., 36., 29., ..., 42., 38., 38.],
+          [41., 30., 34., ..., 38., 28., 30.],
+          ...,
+          [ 5.,  6.,  4., ...,  4.,  4.,  4.],
+          [ 6.,  5.,  3., ...,  4.,  5.,  3.],
+          [ 4.,  4.,  5., ...,  4.,  5.,  4.]],
+
+         [[39., 34., 27., ..., 39., 34., 42.],
+          [42., 36., 30., ..., 28., 33., 38.],
+          [37., 23., 42., ..., 42., 39., 33.],
+          ...,
+          [ 5.,  5.,  4., ...,  5.,  4.,  5.],
+          [ 6.,  5.,  4., ...,  4.,  3.,  4.],
+          [ 4.,  3.,  5., ...,  3.,  4.,  5.]],
+
+         [[36., 40., 37., ..., 30., 30., 37.],
+          [28., 37., 28., ..., 45., 42., 34.],
+          [38., 34., 31., ..., 35., 25., 30.],
+          ...,
+          [ 5.,  5.,  5., ...,  5.,  4.,  5.],
+          [ 6.,  5.,  6., ...,  4.,  6.,  4.],
+          [ 5.,  5.,  4., ...,  3.,  5.,  4.]],
+
+         ...,
+
+         [[10., 11., 13., ..., 10., 10., 12.],
+          [ 8., 13.,  8., ..., 11.,  9., 11.],
+          [13.,  9., 12., ..., 10.,  6., 12.],
+          ...,
+          [ 5.,  8.,  5., ...,  5.,  6.,  5.],
+          [ 4.,  8.,  5., ...,  5.,  5.,  5.],
+          [ 7.,  7.,  7., ...,  6.,  6.,  6.]],
+
+         [[ 8., 12.,  9., ...,  8.,  9., 11.],
+          [14.,  8., 11., ..., 11., 11., 10.],
+          [11., 11., 10., ..., 10.,  9.,  8.],
+          ...,
+          [ 7.,  7.,  5., ...,  7.,  5.,  6.],
+          [ 5.,  7.,  6., ...,  6.,  6.,  6.],
+          [ 4.,  6.,  7., ...,  7.,  6.,  6.]],
+
+         [[ 9.,  8., 12., ...,  7., 11., 10.],
+          [ 7., 13., 10., ..., 13., 10.,  9.],
+          [10.,  8., 12., ..., 11., 12., 15.],
+          ...,
+          [ 7.,  7.,  5., ...,  7.,  5.,  8.],
+          [ 6.,  6.,  6., ...,  7.,  8.,  6.],
+          [ 6.,  7.,  7., ...,  8.,  7.,  6.]]],
+
+
+        [[[39., 43., 41., ..., 33., 41., 38.],
+          [39., 31., 34., ..., 38., 36., 28.],
+          [38., 37., 43., ..., 39., 41., 36.],
+          ...,
+          [ 5.,  5.,  5., ...,  4.,  5.,  5.],
+          [ 5.,  5.,  5., ...,  5.,  4.,  4.],
+          [ 4.,  4.,  7., ...,  5.,  5.,  3.]],
+
+         [[35., 36., 38., ..., 47., 35., 30.],
+          [38., 41., 42., ..., 38., 41., 30.],
+          [40., 45., 38., ..., 36., 34., 42.],
+          ...,
+          [ 6.,  4.,  5., ...,  4.,  7.,  4.],
+          [ 6.,  5.,  5., ...,  6.,  4.,  5.],
+          [ 4.,  5.,  5., ...,  5.,  4.,  4.]],
+
+         [[38., 42., 41., ..., 32., 44., 38.],
+          [38., 26., 30., ..., 36., 36., 30.],
+          [37., 35., 43., ..., 34., 41., 33.],
+          ...,
+          [ 5.,  6.,  7., ...,  5.,  4.,  5.],
+          [ 6.,  4.,  5., ...,  5.,  3.,  4.],
+          [ 4.,  5.,  5., ...,  4.,  5.,  5.]],
+
+         ...,
+
+         [[14.,  9., 10., ..., 12., 11.,  8.],
+          [ 8., 11.,  9., ..., 11.,  9.,  9.],
+          [11., 11., 11., ...,  9., 13.,  9.],
+          ...,
+          [ 6.,  6.,  6., ...,  6.,  7.,  7.],
+          [ 5.,  6.,  6., ...,  5.,  7.,  7.],
+          [ 6.,  5.,  6., ...,  6.,  6.,  7.]],
+
+         [[12.,  8., 14., ..., 12.,  6., 11.],
+          [14., 13., 10., ..., 13., 12., 11.],
+          [ 9., 11.,  9., ..., 13.,  8.,  7.],
+          ...,
+          [ 6.,  5.,  5., ...,  7.,  7.,  5.],
+          [ 8.,  8.,  5., ...,  6.,  6.,  5.],
+          [ 6.,  5.,  7., ...,  7.,  5.,  9.]],
+
+         [[ 9., 11.,  7., ...,  7.,  8., 10.],
+          [10.,  8.,  9., ..., 12., 13.,  9.],
+          [11.,  9.,  9., ..., 11., 11.,  9.],
+          ...,
+          [ 6.,  7.,  5., ...,  5.,  6.,  6.],
+          [ 4.,  7.,  4., ...,  7.,  5.,  6.],
+          [ 7.,  6.,  6., ...,  6.,  7.,  9.]]],
+
+
+        ...,
+
+
+        [[[37., 46., 39., ..., 37., 42., 34.],
+          [37., 48., 35., ..., 43., 44., 50.],
+          [41., 41., 40., ..., 39., 40., 40.],
+          ...,
+          [ 5.,  5.,  6., ...,  7.,  7.,  6.],
+          [ 6.,  6.,  6., ...,  7.,  7.,  5.],
+          [ 6.,  6.,  4., ...,  6.,  5.,  5.]],
+
+         [[48., 47., 42., ..., 51., 46., 40.],
+          [54., 39., 36., ..., 32., 47., 39.],
+          [46., 41., 36., ..., 42., 34., 43.],
+          ...,
+          [ 5.,  5.,  5., ...,  6.,  7.,  6.],
+          [ 5.,  7.,  5., ...,  6.,  5.,  7.],
+          [ 5.,  5.,  5., ...,  6.,  5.,  4.]],
+
+         [[36., 48., 41., ..., 40., 41., 36.],
+          [30., 51., 35., ..., 52., 42., 55.],
+          [38., 42., 48., ..., 41., 42., 34.],
+          ...,
+          [ 6.,  6.,  4., ...,  5.,  8.,  7.],
+          [ 5.,  6.,  8., ...,  6.,  6.,  5.],
+          [ 5.,  5.,  6., ...,  5.,  4.,  6.]],
+
+         ...,
+
+         [[ 9., 11., 13., ..., 12., 13., 12.],
+          [12., 11.,  8., ..., 12., 12., 15.],
+          [11., 12., 12., ..., 12., 11., 13.],
+          ...,
+          [ 7.,  7.,  6., ...,  8.,  6.,  8.],
+          [ 8.,  8.,  8., ...,  8.,  8.,  6.],
+          [ 7.,  5.,  6., ...,  8.,  8.,  6.]],
+
+         [[ 8., 12., 11., ..., 12.,  9., 12.],
+          [17., 10., 10., ..., 11., 14., 15.],
+          [13., 11., 10., ...,  9., 13.,  8.],
+          ...,
+          [ 9.,  7.,  7., ...,  7.,  7.,  9.],
+          [ 8.,  7.,  6., ...,  8.,  6.,  6.],
+          [ 7.,  5.,  6., ...,  9.,  6.,  7.]],
+
+         [[10., 12.,  9., ..., 11., 10., 11.],
+          [10.,  8., 13., ..., 14., 15., 11.],
+          [ 8.,  8., 10., ..., 12., 10., 10.],
+          ...,
+          [ 8.,  6.,  6., ...,  7.,  8.,  6.],
+          [ 7.,  7.,  5., ...,  7.,  6.,  7.],
+          [ 7.,  8.,  8., ...,  5.,  5.,  7.]]],
+
+
+        [[[50., 42., 49., ..., 49., 39., 39.],
+          [45., 47., 46., ..., 39., 40., 63.],
+          [43., 39., 42., ..., 33., 43., 42.],
+          ...,
+          [ 6.,  4.,  4., ...,  6.,  5.,  4.],
+          [ 4.,  5.,  5., ...,  4.,  6.,  4.],
+          [ 6.,  6.,  6., ...,  5.,  8.,  7.]],
+
+         [[41., 52., 38., ..., 41., 33., 49.],
+          [37., 53., 48., ..., 43., 42., 52.],
+          [39., 41., 40., ..., 33., 42., 46.],
+          ...,
+          [ 6.,  6.,  6., ...,  5.,  5.,  7.],
+          [ 7.,  6.,  6., ...,  7.,  5.,  5.],
+          [ 6.,  7.,  6., ...,  6.,  7.,  6.]],
+
+         [[49., 42., 52., ..., 47., 44., 37.],
+          [48., 43., 44., ..., 33., 38., 61.],
+          [48., 44., 43., ..., 36., 41., 42.],
+          ...,
+          [ 7.,  6.,  5., ...,  7.,  5.,  6.],
+          [ 6.,  6.,  4., ...,  8.,  5.,  5.],
+          [ 5.,  7.,  7., ...,  7.,  5.,  6.]],
+
+         ...,
+
+         [[ 7., 10., 12., ..., 13., 14., 11.],
+          [ 9., 14.,  9., ..., 11., 10., 14.],
+          [14., 12., 11., ..., 13.,  9., 11.],
+          ...,
+          [ 7.,  9.,  9., ...,  8.,  7.,  9.],
+          [ 6.,  6.,  8., ...,  7.,  4.,  5.],
+          [ 8.,  7.,  6., ...,  8.,  8.,  5.]],
+
+         [[ 8., 10.,  7., ..., 11.,  9.,  9.],
+          [11., 11., 10., ..., 11.,  8., 11.],
+          [12., 14.,  8., ..., 14.,  9., 10.],
+          ...,
+          [ 7.,  8.,  7., ...,  6.,  7.,  8.],
+          [ 6.,  7.,  6., ...,  8.,  7.,  5.],
+          [ 6.,  8.,  7., ...,  8.,  6.,  6.]],
+
+         [[ 8., 11., 10., ...,  9.,  9.,  6.],
+          [12., 11.,  8., ..., 11., 13., 13.],
+          [ 7.,  9.,  9., ..., 13.,  9., 10.],
+          ...,
+          [ 8.,  8.,  6., ...,  8.,  7.,  7.],
+          [ 5.,  5.,  9., ...,  8.,  7.,  8.],
+          [ 6.,  7.,  7., ...,  6.,  6.,  7.]]],
+
+
+        [[[41., 50., 42., ..., 40., 43., 48.],
+          [38., 52., 36., ..., 46., 37., 56.],
+          [29., 37., 47., ..., 41., 36., 38.],
+          ...,
+          [ 4.,  4.,  4., ...,  5.,  4.,  5.],
+          [ 6.,  4.,  6., ...,  4.,  5.,  5.],
+          [ 6.,  6.,  6., ...,  6.,  6.,  6.]],
+
+         [[53., 38., 50., ..., 41., 60., 39.],
+          [32., 51., 30., ..., 43., 53., 44.],
+          [32., 37., 52., ..., 39., 46., 42.],
+          ...,
+          [ 5.,  4.,  5., ...,  6.,  5.,  6.],
+          [ 5.,  6.,  5., ...,  4.,  6.,  4.],
+          [ 5.,  6.,  5., ...,  6.,  6.,  4.]],
+
+         [[40., 55., 45., ..., 38., 34., 50.],
+          [45., 47., 41., ..., 46., 32., 60.],
+          [31., 37., 40., ..., 41., 30., 40.],
+          ...,
+          [ 5.,  5.,  5., ...,  5.,  5.,  6.],
+          [ 5.,  5.,  4., ...,  6.,  5.,  4.],
+          [ 6.,  6.,  6., ...,  5.,  6.,  5.]],
+
+         ...,
+
+         [[ 9., 11.,  9., ...,  8., 10., 10.],
+          [14., 15., 12., ..., 10., 14., 12.],
+          [11., 12., 13., ...,  8., 12.,  9.],
+          ...,
+          [ 8.,  7.,  6., ...,  8.,  5.,  8.],
+          [ 6.,  7.,  6., ...,  6.,  5.,  6.],
+          [ 5.,  7.,  8., ...,  7.,  6.,  7.]],
+
+         [[11., 12.,  8., ..., 11., 11., 12.],
+          [12., 11., 10., ...,  9.,  9., 11.],
+          [12., 10., 11., ..., 10.,  9., 11.],
+          ...,
+          [ 5.,  8.,  7., ...,  8.,  6.,  7.],
+          [ 7.,  7.,  6., ...,  6.,  8.,  6.],
+          [ 7.,  7.,  7., ...,  6.,  7.,  6.]],
+
+         [[ 8.,  9., 10., ...,  9., 11.,  8.],
+          [12.,  8., 10., ..., 10., 14.,  9.],
+          [ 9.,  5., 10., ..., 11., 10.,  9.],
+          ...,
+          [ 9.,  7.,  6., ...,  8.,  8.,  7.],
+          [ 6.,  6.,  6., ...,  5.,  6.,  4.],
+          [ 5.,  7.,  5., ...,  5.,  8.,  7.]]]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data type: &#39;</span><span class="p">,</span> <span class="n">control01_music_data</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data shape: &#39;</span><span class="p">,</span> <span class="n">control01_music_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data type:  float64
+data shape:  (80, 80, 50, 105)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Check to make sure the array data is cached:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="n">control01_music_img</span><span class="o">.</span><span class="n">in_memory</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">control01_music_img</span><span class="o">.</span><span class="n">in_memory</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nice! Now lastly, let’s take a look at the image header, or a summary of all of the image information:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">control01_music_img</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;nibabel.nifti1.Nifti1Header&#39;&gt; object, endian=&#39;&lt;&#39;
+sizeof_hdr      : 348
+data_type       : b&#39;&#39;
+db_name         : b&#39;&#39;
+extents         : 0
+session_error   : 0
+regular         : b&#39;r&#39;
+dim_info        : 48
+dim             : [  4  80  80  50 105   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.000000e+00  2.900000e+00  2.900000e+00  3.000000e+00  3.000000e+00
+  1.000000e+00  2.500000e-01  5.331821e+04]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 49
+slice_code      : alternating increasing 2
+xyzt_units      : 10
+cal_max         : 0.0
+cal_min         : 0.0
+slice_duration  : 20.0
+toffset         : 0.0
+glmax           : 255
+glmin           : 0
+descrip         : b&#39;TE=25;sec=53318.2100;phaseDir=+;dwell=0.250&#39;
+aux_file        : b&#39;&#39;
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : 0.005969083
+quatern_c       : -0.9395495
+quatern_d       : -0.34196803
+qoffset_x       : 118.931046
+qoffset_y       : -77.45343
+qoffset_z       : -140.27751
+srow_x          : [-2.89823341e+00  0.00000000e+00  1.04698524e-01  1.18931046e+02]
+srow_y          : [-6.5055683e-02  2.2215290e+00 -1.9271882e+00 -7.7453430e+01]
+srow_z          : [ 7.7530213e-02  1.8640840e+00  2.2967334e+00 -1.4027751e+02]
+intent_name     : b&#39;&#39;
+magic           : b&#39;n+1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Last step, transpose the image data array! Remember that right now, the image shape is a 4D array in the format (X, Y, Z, T) but it’s more convenient for us to work with array data in the format (T, Z, Y, X) so we need to transpose it:</p>
+<p><strong>DO THIS FOR COMPLETION:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Apply a transpose method to data, transposed data shape should be (105, 50, 80, 80)</span>
+<span class="n">transposed_data</span> <span class="o">=</span> <span class="c1">#YOUR CODE HERE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-30-740d6bc55233&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="n">transposed_data</span> <span class="o">=</span> <span class="c1">#YOUR CODE HERE</span>
+                      <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great! We not have a real fMRI dataset that has been transposed to the proper format!</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="d-fmri-data-manipulation">
+<h1><span class="section-number">19.10. </span>4D fMRI Data Manipulation<a class="headerlink" href="#d-fmri-data-manipulation" title="Permalink to this heading">#</a></h1>
+<p>Ok so now we have a 4-dimension array of fMRI data. Remember that this is essentially a 4D scan containing volumetric/voxel data over a series of time points.</p>
+<p><strong>Indexing</strong></p>
+<p>Using the transposed data, we can isolate the voxel time series data by looking at a single voxel, say (1, 1, 1) over all of the time points. Remember that time is the first dimension:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_time_series</span> <span class="o">=</span> <span class="n">transposed_data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">first_time_series</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">first_time_series</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(105,)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([42., 36., 30., 34., 35., 38., 30., 33., 39., 33., 32., 37., 46.,
+       27., 37., 37., 22., 31., 27., 46., 32., 32., 45., 44., 43., 44.,
+       36., 33., 26., 28., 31., 39., 47., 32., 38., 35., 38., 32., 30.,
+       43., 44., 30., 40., 33., 37., 41., 37., 32., 31., 30., 37., 41.,
+       34., 44., 31., 31., 33., 25., 33., 29., 39., 33., 36., 37., 32.,
+       30., 41., 30., 35., 38., 36., 35., 34., 32., 34., 34., 25., 32.,
+       40., 37., 49., 36., 25., 45., 29., 27., 33., 29., 32., 35., 40.,
+       41., 31., 29., 40., 26., 37., 30., 37., 37., 38., 41., 28., 33.,
+       38.])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Mean</strong></p>
+<p>When working with 4D fMRI data arrays, it can be useful to take a descriptive statistic across time series values especially for pre-processing. For example, taking the mean of the volume data over time gives a descriptive statistic for the whole brain representing the 3D mean volume.</p>
+<p>To take the mean over <strong>time</strong> (which is the first dimension) we just have to specify the axis:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_mean</span> <span class="o">=</span> <span class="n">transposed_data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#axis=0 specifies axis as time, the first (0) dimension</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_mean</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">data_mean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(50, 80, 80)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[ 0.        , 35.18095238, 36.65714286, ..., 43.9047619 ,
+         42.66666667, 41.97142857],
+        [ 0.        , 34.96190476, 35.52380952, ..., 43.43809524,
+         43.97142857, 43.11428571],
+        [ 0.        , 35.28571429, 36.71428571, ..., 44.40952381,
+         42.35238095, 41.52380952],
+        ...,
+        [ 0.        ,  9.93333333, 10.3047619 , ..., 11.4       ,
+         10.73333333, 10.42857143],
+        [ 0.        ,  9.65714286,  9.83809524, ..., 11.23809524,
+         10.23809524,  9.68571429],
+        [ 0.        ,  9.1047619 ,  9.26666667, ..., 10.96190476,
+          9.7047619 ,  9.48571429]],
+
+       [[ 0.        , 35.41904762, 35.65714286, ..., 42.85714286,
+         41.41904762, 40.79047619],
+        [ 0.        , 34.94285714, 36.99047619, ..., 42.76190476,
+         43.46666667, 42.64761905],
+        [ 0.        , 35.44761905, 35.01904762, ..., 43.15238095,
+         40.55238095, 39.65714286],
+        ...,
+        [ 0.        , 10.35238095, 11.31428571, ..., 12.24761905,
+         11.48571429, 11.22857143],
+        [ 0.        , 10.66666667, 10.51428571, ..., 11.73333333,
+         11.20952381, 10.35238095],
+        [ 0.        , 10.31428571, 10.39047619, ..., 11.33333333,
+         10.80952381,  9.97142857]],
+
+       [[ 0.        , 33.5047619 , 35.17142857, ..., 41.8952381 ,
+         40.07619048, 38.60952381],
+        [ 0.        , 34.13333333, 35.47619048, ..., 41.60952381,
+         40.38095238, 38.68571429],
+        [ 0.        , 33.15238095, 34.87619048, ..., 42.0952381 ,
+         40.00952381, 38.87619048],
+        ...,
+        [ 0.        , 10.14285714, 10.68571429, ..., 11.7047619 ,
+         11.74285714, 10.67619048],
+        [ 0.        ,  9.8952381 , 10.21904762, ..., 11.40952381,
+         10.74285714, 10.18095238],
+        [ 0.        ,  9.55238095,  9.7047619 , ..., 11.32380952,
+         10.26666667,  9.82857143]],
+
+       ...,
+
+       [[ 0.        ,  4.88571429,  5.0952381 , ...,  5.98095238,
+          5.46666667,  5.05714286],
+        [ 0.        ,  4.92380952,  4.8       , ...,  5.84761905,
+          5.64761905,  5.36190476],
+        [ 0.        ,  4.77142857,  4.8952381 , ...,  6.13333333,
+          5.78095238,  5.71428571],
+        ...,
+        [ 0.        ,  5.82857143,  6.2       , ...,  7.04761905,
+          6.97142857,  6.79047619],
+        [ 0.        ,  6.06666667,  6.22857143, ...,  7.19047619,
+          7.00952381,  6.95238095],
+        [ 0.        ,  5.96190476,  6.18095238, ...,  6.75238095,
+          7.05714286,  6.88571429]],
+
+       [[ 0.        ,  4.31428571,  4.4952381 , ...,  5.8       ,
+          5.17142857,  4.66666667],
+        [ 0.        ,  4.43809524,  4.65714286, ...,  5.83809524,
+          5.48571429,  5.01904762],
+        [ 0.        ,  4.9047619 ,  4.72380952, ...,  5.6952381 ,
+          5.45714286,  5.35238095],
+        ...,
+        [ 0.        ,  5.9047619 ,  6.19047619, ...,  6.85714286,
+          6.62857143,  6.6       ],
+        [ 0.        ,  6.22857143,  6.18095238, ...,  6.66666667,
+          6.47619048,  6.58095238],
+        [ 0.        ,  6.17142857,  6.40952381, ...,  6.39047619,
+          6.38095238,  6.31428571]],
+
+       [[ 0.        ,  4.32380952,  4.41904762, ...,  5.75238095,
+          5.51428571,  5.2952381 ],
+        [ 0.        ,  4.41904762,  4.55238095, ...,  5.78095238,
+          5.53333333,  5.18095238],
+        [ 0.        ,  4.55238095,  4.77142857, ...,  5.57142857,
+          5.52380952,  5.27619048],
+        ...,
+        [ 0.        ,  6.34285714,  6.6       , ...,  6.61904762,
+          6.61904762,  6.61904762],
+        [ 0.        ,  6.31428571,  6.58095238, ...,  6.47619048,
+          6.53333333,  6.6       ],
+        [ 0.        ,  6.74285714,  6.66666667, ...,  6.33333333,
+          6.3047619 ,  6.36190476]]])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Masking</strong></p>
+<p>The last important technique for subsetting data from an array is <strong>masking</strong>.</p>
+<p>How do we mask an array? Masking involves creating a <strong>boolean</strong> array (True/False) version of the data array where values corresponding to <strong>True</strong> masks are kept and values corresponding to <strong>False</strong> masks are not. The masking array must be the same size as the data array so that the indices match up.</p>
+<p>Masks can also be created using <strong>binary operators</strong> (&gt;, &lt;, ==, !=). This helps with larger arrays where typing out all of the True/False values can get really tedious. It also allows us to analyze or filter the values of the array by some condition.</p>
+<p><strong>What’s the point of masking?</strong></p>
+<p>Masking allows for selecting certain indices, like indexing, which <strong>reduces dimensionality</strong>: masked arrays have to be returned in a single dimension because after masking, the resulting array elements are no longer necessarily  in a form that fits exactly into the original multiple dimensions.</p>
+<p>We can use masking in fMRI data as a <strong>pre-processing step</strong>, using it to get rid of unwanted voxels or to get just a subset of the voxels we are interested in (for example just data from a certain part of the brain).</p>
+<p>To figure out what data we are actually interested in, let’s plot a histogram of all of the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">transposed_data</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Raw fMRI Activity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;TRs (count)&#39;</span><span class="p">)</span> <span class="c1">#note: TR is the sampling rate</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;TRs (count)&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/31bad3eee221d28629006c7cb1a05b375c9b4496dc9d2db6a23290c86a6e8e11.png" src="../../_images/31bad3eee221d28629006c7cb1a05b375c9b4496dc9d2db6a23290c86a6e8e11.png" />
+</div>
+</div>
+<p>From the histogram, we see that there is a large peak near 0 and another smaller bump around 1000. The values close to 0 are actually from outside of the brain, where the low signal values are caused by external things like air. So we aren’t actually interested in the data there.</p>
+<p>So how can we extract the data from only the region of the scan that contains brain data? <strong>Masking!</strong></p>
+<p>If we can determine a bottom threshold for the data we are interested in, we can filter out the non-brain data using a boolean mask! Let’s take a closer look at a more specific range of the histogram:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">transposed_data</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1500</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Raw fMRI Activity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;TRs (count)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;TRs (count)&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/1631344238d33b8ae374fc687b9875f660cd1797dcf0850a76908339cecf7c04.png" src="../../_images/1631344238d33b8ae374fc687b9875f660cd1797dcf0850a76908339cecf7c04.png" />
+</div>
+</div>
+<p>Ok so by setting the range as 100 to 1500, we cut off most of the low signal range data and we can see the main brain data bump better. It looks like the plot as a second peak at around 700 to 1300, so we can set 700 as our low threshold.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">threshold</span> <span class="o">=</span> <span class="mi">700</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we have to determine which volume to threshold- this is where the <strong>mean volume</strong> comes in. If we picked an individual volume, it could have noise fluctuations that bias its value. However, the volume is resistant to fluctuations. So, let’s mask the mean 3D volume array <code class="docutils literal notranslate"><span class="pre">data_mean</span></code> from before so that only voxels whose mean activity is above the threshold are kept.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">masked_data</span> <span class="o">=</span> <span class="n">data_mean</span> <span class="o">&gt;</span> <span class="n">threshold</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;There are </span><span class="si">{</span><span class="n">masked_data</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s1"> voxel activity values above the threshold.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 48665 voxel activity values above the threshold.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s visualize the mask! We’ll use a specifc function to create an interactive plot that shows one axial slice of the 3D mask at a time. Use the sliding bars to move through the brain slices!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span><span class="p">,</span> <span class="n">widgets</span>
+<span class="k">def</span> <span class="nf">plotMask</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">masked_data</span><span class="p">[</span><span class="n">i</span><span class="p">,:,:],</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    
+<span class="n">num_axial_slices</span> <span class="o">=</span> <span class="n">masked_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">interact</span><span class="p">(</span><span class="n">plotMask</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="n">num_axial_slices</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="n">num_axial_slices</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-8-dd62f50d49cc&gt;</span> in <span class="ni">&lt;cell line: 7&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">num_axial_slices</span> <span class="o">=</span> <span class="n">masked_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">_</span> <span class="o">=</span> <span class="n">interact</span><span class="p">(</span><span class="n">plotMask</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="n">num_axial_slices</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="n">num_axial_slices</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;masked_data&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also use a similar function to plot the data directly without a filtering mask:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plotData</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data_mean</span><span class="p">[</span><span class="n">i</span><span class="p">,:,:],</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">2500</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    
+<span class="n">_</span> <span class="o">=</span> <span class="n">interact</span><span class="p">(</span><span class="n">plotData</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="n">num_axial_slices</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="n">num_axial_slices</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "72b30bec96324730826a7870c7dc361d", "version_major": 2, "version_minor": 0}</script><img alt="../../_images/a9055ca52eaa26abbdb21987c12ef03a883129286a079942311e8fd1aa2d4ace.png" src="../../_images/a9055ca52eaa26abbdb21987c12ef03a883129286a079942311e8fd1aa2d4ace.png" />
+<img alt="../../_images/e1d125607b5aec9fff27c4f9571c85bcfaceed871b196708f7810965d6850998.png" src="../../_images/e1d125607b5aec9fff27c4f9571c85bcfaceed871b196708f7810965d6850998.png" />
+<img alt="../../_images/6a21db70e08ea64d452db46d8217c08e4e1ab32b1349ddee7cd123a316166b94.png" src="../../_images/6a21db70e08ea64d452db46d8217c08e4e1ab32b1349ddee7cd123a316166b94.png" />
+<img alt="../../_images/fa5fd2ed072547fa0186562ed6f236f55de1cef49a7063c59739498cae7f65e3.png" src="../../_images/fa5fd2ed072547fa0186562ed6f236f55de1cef49a7063c59739498cae7f65e3.png" />
+<img alt="../../_images/646aadbc1a9d858055c07fe41cfa5512bfdc19d654acc582085f98bcee35c6fb.png" src="../../_images/646aadbc1a9d858055c07fe41cfa5512bfdc19d654acc582085f98bcee35c6fb.png" />
+</div>
+</div>
+<p>Good, the plots look pretty similar!</p>
+<p>In summary, we loaded an actual fMRI experimental dataset and reviewed some basic data attribute info. You learned some basic 4D array data manipulation useful for fMRI data including averaging, indexing, and masking. Masking helps filter out unwanted voxels (like non-brain data) or allows us to focus in on specific brain data in a desired range of brain activity. Lastly, we plotted the masked data and the mean volume data in interactive plots to finally take a peak into the visualizable fMRI data!</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="visualizing-an-fmri-dataset">
+<h1><span class="section-number">19.11. </span>Visualizing an FMRI Dataset<a class="headerlink" href="#visualizing-an-fmri-dataset" title="Permalink to this heading">#</a></h1>
+<p>Thus far, we have been able to simply load a dataset into memory and perform simple manipulation tasks to extract information from the 4D Array. In this module we will go more in depth into the different types of extractable data that can be analyzed from a single FMRI dataset and how to anlyze each of these different forms.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">nibabel</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Data Locally</span>
+<span class="c1"># Download data</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/neurotech-berkeley/neurotech-course/blob/master/module_3_fMRI_dataset/sub-control01/sub-control01_func_sub-control01_task-music_run-1_bold.nii?raw=true&#39;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sub-control01_func_sub-control01_task-music_run-1_bold.nii&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;sub-control01_func_sub-control01_task-music_run-1_bold.nii&#39;</span><span class="p">)</span>
+<span class="n">music_img</span> <span class="o">=</span> <span class="n">nibabel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The original (X, Y, Z, T) dimension</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original Shape: &quot;</span><span class="p">,</span> <span class="n">music_img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="c1"># Cache data and transpose (T, Z, Y, X)</span>
+<span class="n">music_data</span> <span class="o">=</span> <span class="n">music_img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Transpose Shape: &quot;</span><span class="p">,</span> <span class="n">music_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original Shape:  (80, 80, 50, 105)
+Transpose Shape:  (105, 50, 80, 80)
+</pre></div>
+</div>
+</div>
+</div>
+<p>With the transpose we are able to successfully flip the dimensions of the data to make manipulation easier when trying to select certain Time Steps, Volumes or Cross Sections of the FMRI Data.</p>
+<p><em>FMRI Array Types</em></p>
+<p>With these different dimensions there are numerous combinations that can be utilized to represent different FMRI Array data for different purposes. Here are a few common ones we will be looking at.</p>
+<ul class="simple">
+<li><p><strong>Voxel Time Series</strong> (1D) - A series of values that represent a single voxel (volumetric pixel) of area within the 3D FMRI Volume data. This voxel has a (X, Y, Z) coordinate that stays constant. These series allow for a single area in the brain to be plotted over time visualizing simple activation data.</p></li>
+<li><p><strong>Slice Plot</strong> (2D) - An image that represents a single frame in time and a single plane within the brain. There are defined biological sectional views that will be defined later.</p></li>
+<li><p><strong>Volume Plot</strong> (3D) - Either a series of Slice Plots upon a certain axis or an interactive 3D representation of the brain at a single time frame.</p></li>
+</ul>
+<p>These plots can be combined with other dimensions such as time to represent more interactive views of the data. The basic premise behind FMRI is using these visual patterns over time to derive conclusions.</p>
+<p><em>Voxel Selection</em></p>
+<p>There are many forms of extractable data that can be visualized and analyzed from a single Voxel Timeseries FMRI Scan (4D) this is the form that you have been loading thus far. After transposing the data is shaped with the dimensions (T, Z, Y, X) where when looking from the <strong>front</strong> or <strong>“face”</strong> of the brain.</p>
+<ul class="simple">
+<li><p><strong>T</strong> (Time Steps) Each time step measure is taken with some standard sampling rate around 1 to 2 second intervals. Take note when visualizing a timeseries as the index does not coresspond 1 to 1 on the time.</p></li>
+<li><p><strong>Z</strong> (Top to Bottom)</p></li>
+<li><p><strong>X</strong> (Left to Right)</p></li>
+<li><p><strong>Y</strong> (Front to Back)</p></li>
+</ul>
+<p>We will use <strong>Voxel Selection</strong> techniques to generate a <strong>Voxel Time Series</strong> plot of a region of interest within the data array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using Slicing select a single voxel at (Z=21, Y=50, X=51)</span>
+<span class="n">time_series</span> <span class="o">=</span> <span class="n">music_data</span><span class="p">[:,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">51</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time_series</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[808. 816. 803. 797. 829. 810. 813. 848. 803. 803. 782. 796. 800. 790.
+ 811. 818. 793. 772. 804. 775. 796. 811. 807. 809. 802. 797. 807. 793.
+ 796. 824. 794. 797. 788. 822. 778. 806. 821. 794. 818. 788. 820. 821.
+ 834. 812. 822. 818. 792. 813. 836. 816. 828. 805. 810. 786. 780. 814.
+ 794. 803. 796. 797. 804. 791. 793. 782. 780. 815. 803. 811. 796. 802.
+ 782. 784. 832. 765. 814. 799. 808. 836. 810. 799. 785. 794. 835. 794.
+ 784. 809. 818. 836. 807. 795. 812. 795. 817. 827. 809. 802. 810. 798.
+ 808. 805. 810. 809. 805. 789. 786.]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Line Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_series</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (TRs)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;BOLD Signal (a.u.)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;BOLD Signal (a.u.)&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/9aa2da3371a6a45e3e93aadceef7eb859fc1666fa2476996bd2db34bc0f71636.png" src="../../_images/9aa2da3371a6a45e3e93aadceef7eb859fc1666fa2476996bd2db34bc0f71636.png" />
+</div>
+</div>
+<p>This voxel plot is very random for now but as we apply further preprocessing analysis techniques we will be able to better understand activation sites and patterns that occur within them.</p>
+<p><em>Sectional Slicing</em></p>
+<p>From voxel timeseries plots the next most popular visualization is the set of sectional 2D plots of the brains. There are a set of terms to describe the three most medically common views. All these views have the temporal dimension fixed and one other coordinate fixed.</p>
+<ul class="simple">
+<li><p><strong>Axial</strong> (or horizontal) slice: plane in (X,Y)</p></li>
+<li><p><strong>Coronal</strong> slice: plane in (X,Z)</p></li>
+<li><p><strong>Sagittal</strong> slice: plane in (Y,Z)</p></li>
+</ul>
+<img src="https://images.ctfassets.net/cnu0m8re1exe/1k0YS9HKpsyurGlnI1Zlky/223cbf9b658b7068925ba7f944a9bb39/sagittal.jpg" alt="Drawing" width="400px"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic Axial Slice (Set Z fixed)</span>
+<span class="n">slice_axial</span> <span class="o">=</span> <span class="n">music_data</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">slice_axial</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/a7c88b6776537215a99e4cac01983c0eb57ea7f09f15f88ecec010579baba147.png" src="../../_images/a7c88b6776537215a99e4cac01983c0eb57ea7f09f15f88ecec010579baba147.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic Sagittal Slice (Fixed X)</span>
+<span class="n">slice_sagittal</span> <span class="o">=</span> <span class="n">music_data</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">40</span><span class="p">]</span>
+<span class="c1"># Flip View on (Z, Y)Due to Indexing</span>
+<span class="n">slice_sagittal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">m</span><span class="o">=</span><span class="n">slice_sagittal</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">slice_sagittal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/84b2d1a693156bc89bc08847d8202302e21f3c177c390bf75a8a17a5d1e351e5.png" src="../../_images/84b2d1a693156bc89bc08847d8202302e21f3c177c390bf75a8a17a5d1e351e5.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic Coronal Slice (Fixed Y)</span>
+<span class="n">slice_sagittal</span> <span class="o">=</span> <span class="n">music_data</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="p">:,</span> <span class="mi">40</span><span class="p">,</span> <span class="p">:]</span>
+<span class="c1"># Flip View on (Z, X) Due to Indexing</span>
+<span class="n">slice_sagittal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">m</span><span class="o">=</span><span class="n">slice_sagittal</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">slice_sagittal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/aafba298d87269ac2da67ebd9f006519eb0578929a5704be9403a4f2892618bc.png" src="../../_images/aafba298d87269ac2da67ebd9f006519eb0578929a5704be9403a4f2892618bc.png" />
+</div>
+</div>
+<p><em>Volume Visualization</em></p>
+<p>Using a combination of techniques applied above and the use of interactive python elements one could create a sectional Volume Map of an fmri at a certain time point. We will be utilizing subplots to plot a set of plots for a certain sectional view.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Axial Slices</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">music_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">music_data</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Axial Slices&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/e54732365d5f991d5d4a04268006d6d388aea441789e29cdfcb0db4aa691884d.png" src="../../_images/e54732365d5f991d5d4a04268006d6d388aea441789e29cdfcb0db4aa691884d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sagittal Slices</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">music_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">slice_sagittal</span> <span class="o">=</span> <span class="n">music_data</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="n">i</span><span class="p">]</span>
+    <span class="n">slice_sagittal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">m</span><span class="o">=</span><span class="n">slice_sagittal</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">slice_sagittal</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Sagittal Slices&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/98644bdec6b7717d27d36c3a665d449371752d0b905e57fd88ad461bb465b7eb.png" src="../../_images/98644bdec6b7717d27d36c3a665d449371752d0b905e57fd88ad461bb465b7eb.png" />
+</div>
+</div>
+<p><strong>DO THIS FOR COMPLETION:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coronal Slices</span>
+
+<span class="c1"># YOUR CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you have a further intrest in complex visualization check out the <strong>pycortex</strong> library at <a class="reference external" href="https://gallantlab.github.io/pycortex/index.html">https://gallantlab.github.io/pycortex/index.html</a>. The library has much more complex visualization algorithms that can be applied that dont work natively in these colabs.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\Chapter_05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5.2-Preprocessing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">19.4. </span>5.2. Preprocessing</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">19.8. <strong>What is fMRI Data?</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#real-fmri-datasets">19.9. Real fMRI Datasets</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#d-fmri-data-manipulation">19.10. 4D fMRI Data Manipulation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-an-fmri-dataset">19.11. Visualizing an FMRI Dataset</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Parth Desai, Pratyush Das
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
