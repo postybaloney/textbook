@@ -3,9 +3,9 @@
 
 #######################################################################################
 # Book settings
-title: Data 140 Textbook
-author: Ani Adhikari
-email: adhikari@berkeley.edu
+title: NeuroTech Textbook
+author: Parth Desai, Pratyush Das
+email: parthrudesai@berkeley.edu
 logo: content/images/logo/sp22_ugarte_logo.png
 
 # Force re-execution of notebooks on each build.
