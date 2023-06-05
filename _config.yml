@@ -24,7 +24,7 @@ html:
 
 # Repository information
 repository: 
-  url: https://https://github.com/postybaloney/textbook
+  url: https://github.com/postybaloney/textbook
   branch: gh-pages
 
 # Tells Jupyter Book to add JupyterHub links to pages
