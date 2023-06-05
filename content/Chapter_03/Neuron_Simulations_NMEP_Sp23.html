@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>17. Intro Python and Single Neuron Models &#8212; NeuroTech Textbook</title>
+    <title>4. Intro Python and Single Neuron Models &#8212; NeuroTech Textbook</title>
   
   
   
@@ -67,8 +67,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="18. Relations Between Variables" href="../Chapter_04/00_Relations_Between_Variables.html" />
-    <link rel="prev" title="16. images" href="3.5-Learning%2BMemory.html" />
+    <link rel="next" title="5. fMRI" href="../Chapter_04/4-fMRI.html" />
+    <link rel="prev" title="3. images" href="3.5-Learning%2BMemory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,17 +167,17 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_01/1-Intro.html">1. What is Neurotechnology?</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.1-RelevantTech.html">1.1. 1.1 Electrodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.1-RelevantTech.html">1.1. Electrodes</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.2-CurrentProjects.html">1.4. 1.2 Current Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.2-CurrentProjects.html">1.4. Current Projects</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.3-EthicalConcerns.html">1.8. 1.2 Ethical Concerns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.3-EthicalConcerns.html">1.8. Ethical Concerns</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.4-TechnologyInvolved.html">1.11. 1.4 What Kinds of Technology is Involved?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.4-TechnologyInvolved.html">1.11. What Kinds of Technology is Involved?</a></li>
 
 
 
@@ -186,13 +186,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Chapter_01/1.5-ProblemSolved.html">1.17. What Problems is Neurotech Trying to Solve?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Chapter_02/2.2-TheNervoussystem.html">2. 2.1 The Nervous System</a></li>
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../Chapter_02/2.3-ActionPotential.html">7. Images go here</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Chapter_02/Python_Introduction.html">8. <strong>Python Primer</strong></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_02/2-Neuroscience.html">2. What is Neuroscience</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_02/2.1-BrainAsAWhole.html">2.1. The Limbic System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_02/Python_Introduction.html">2.2. <strong>Python Primer</strong></a></li>
 
 
 
@@ -200,26 +196,25 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="3.5-Learning%2BMemory.html">16. images</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">17. <strong>Intro Python and Single Neuron Models</strong></a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_04/00_Relations_Between_Variables.html">18. Relations Between Variables</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/01_Joint_Distributions.html">18.1. Joint Distributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/02_Examples.html">18.2. Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/03_Marginal_Distributions.html">18.3. Marginal Distributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/04_Conditional_Distributions.html">18.4. Conditional Distributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/05_Dependence_and_Independence.html">18.5. Dependence and Independence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/06_Exercises.html">18.6. Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_05/5-EEG.html">19. 5. EEG</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_05/5.1-BrainWaves.html">19.1. 5.1. Brain Waves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.5-Learning%2BMemory.html">3. images</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. <strong>Intro Python and Single Neuron Models</strong></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_04/4-fMRI.html">5. fMRI</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/4.1-BrainActivity.html">5.1. Brain Activity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/4.2-Data.html">5.2. Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_04/4.3-Examples.html">5.3. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_05/5-EEG.html">6. 5. EEG</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_05/5.1-BrainWaves.html">6.1. 5.1. Brain Waves</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_05/5.2-Preprocessing.html">19.4. 5.2. Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_05/5.2-Preprocessing.html">6.4. 5.2. Preprocessing</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Chapter_05/NMEP_Sp23_fMRI_Lab.html">19.8. <strong>What is fMRI Data?</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_05/NMEP_Sp23_fMRI_Lab.html">6.8. <strong>What is fMRI Data?</strong></a></li>
 
 
 
@@ -402,20 +397,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">17.1. <strong>Jupyter Notebooks</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">17.1.1. Numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">4.1. <strong>Jupyter Notebooks</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">4.1.1. Numpy</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biological-neuron-simulations">17.2. <strong>Biological Neuron Simulations</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#action-potential-biology">17.2.1. Action Potential Biology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-gated-channels">17.2.2. Voltage Gated Channels</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hodgkin-huxley-model">17.2.2.1. Hodgkin-Huxley Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biological-neuron-simulations">4.2. <strong>Biological Neuron Simulations</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#action-potential-biology">4.2.1. Action Potential Biology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-gated-channels">4.2.2. Voltage Gated Channels</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hodgkin-huxley-model">4.2.2.1. Hodgkin-Huxley Model</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrate-and-fire">17.3. Integrate and Fire</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">17.3.1. <strong>Conceptual Questions</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrate-and-fire">4.3. Integrate and Fire</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">4.3.1. <strong>Conceptual Questions</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -440,11 +435,11 @@ document.write(`
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="intro-python-and-single-neuron-models">
-<h1><span class="section-number">17. </span><strong>Intro Python and Single Neuron Models</strong><a class="headerlink" href="#intro-python-and-single-neuron-models" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4. </span><strong>Intro Python and Single Neuron Models</strong><a class="headerlink" href="#intro-python-and-single-neuron-models" title="Permalink to this heading">#</a></h1>
 <p>Before starting <strong>save a copy of this notebook in your own drive</strong>. This way you can edit.
 In today’s section we’re going to review different python methods for computing functions and the basics of using jupyter notebooks. We will apply these skills to build and plot our first neuronal models using differential equations.</p>
 <section id="jupyter-notebooks">
-<h2><span class="section-number">17.1. </span><strong>Jupyter Notebooks</strong><a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span><strong>Jupyter Notebooks</strong><a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h2>
 <p>Many of your resources will include jupyter notebooks. These documents are comprised of cells with code and text. The code will all be in python and we’ll be using basic modules such as numpy for this lab.</p>
 <ul class="simple">
 <li><p>Run a Cell: Shift + Enter</p></li>
@@ -452,7 +447,7 @@ In today’s section we’re going to review different python methods for comput
 </ul>
 <p>When you run a cell the last expression written will be evaluated and printed below the cell. If a value is explicitly print this will also show up under the cell after it is run.</p>
 <section id="numpy">
-<h3><span class="section-number">17.1.1. </span>Numpy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.1.1. </span>Numpy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h3>
 <p>A NumPy array is the same as a list but arithmetic operations on NumPy arrays correspond to elementwise operations. Basically, numpy is a library that makes our lives easier when working with groups of data and we will use it often.</p>
 <p>Important functions:</p>
 <ul class="simple">
@@ -581,10 +576,10 @@ c =
 </section>
 </section>
 <section id="biological-neuron-simulations">
-<h2><span class="section-number">17.2. </span><strong>Biological Neuron Simulations</strong><a class="headerlink" href="#biological-neuron-simulations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2. </span><strong>Biological Neuron Simulations</strong><a class="headerlink" href="#biological-neuron-simulations" title="Permalink to this heading">#</a></h2>
 <p>When attempting to understand the function of neurons, it is integral to have a good understanding of <strong>Action Potentials</strong>. In this notebook we will model the biological structures involved in an action potential as basic circuit components. We do this to derive a function that will fully simulate the potential of a spiking neuron.</p>
 <section id="action-potential-biology">
-<h3><span class="section-number">17.2.1. </span>Action Potential Biology<a class="headerlink" href="#action-potential-biology" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.2.1. </span>Action Potential Biology<a class="headerlink" href="#action-potential-biology" title="Permalink to this heading">#</a></h3>
 <p>The neuron membrane is a complex structure but there are really three key components that we must include in our model to best simulate a spike. The membrane includes:</p>
 <ul class="simple">
 <li><p>Ion Channels</p></li>
@@ -658,11 +653,11 @@ $<span class="math notranslate nohighlight">\(\tau = R_{Na}C\)</span>$</p>
 </div>
 </section>
 <section id="voltage-gated-channels">
-<h3><span class="section-number">17.2.2. </span>Voltage Gated Channels<a class="headerlink" href="#voltage-gated-channels" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.2.2. </span>Voltage Gated Channels<a class="headerlink" href="#voltage-gated-channels" title="Permalink to this heading">#</a></h3>
 <p>To simulate a spike we have to add a key detail into our model that allows for our neuron voltage pattern to spike after reaching a certain threshold. The key here is carefully calibrated <strong>voltage gated channels</strong>. These channels propoagate the action potetional down the axon by allowing ion flow when certain potential thresholds are reached.</p>
 <p>From the model above we used resistors to represent ion channels. A voltage gated channel therefore changes properties of this <strong>resistor</strong> based on the voltage.</p>
 <section id="hodgkin-huxley-model">
-<h4><span class="section-number">17.2.2.1. </span>Hodgkin-Huxley Model<a class="headerlink" href="#hodgkin-huxley-model" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">4.2.2.1. </span>Hodgkin-Huxley Model<a class="headerlink" href="#hodgkin-huxley-model" title="Permalink to this heading">#</a></h4>
 <p>The Hodgkin-Huxley is a popular neuronal model that uses the ideas we developed. The model contains a leakage channel and channels for sodium (Na) and potassium (K). These three channels are in parrallel each with its own battery (equilibrium potential) for that specific type of ion.</p>
 <p>The main difference is that the sodium and potassium channels are open with different <strong>probabilities</strong>.</p>
 <p>For potassium channels we can define a channel have 4 sub parts that all must be open for the channel to allow passage. The probability a sub part is open is defined as <strong>n</strong> therefore
@@ -842,7 +837,7 @@ $<span class="math notranslate nohighlight">\(
 </section>
 </section>
 <section id="integrate-and-fire">
-<h2><span class="section-number">17.3. </span>Integrate and Fire<a class="headerlink" href="#integrate-and-fire" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.3. </span>Integrate and Fire<a class="headerlink" href="#integrate-and-fire" title="Permalink to this heading">#</a></h2>
 <p>The HH is a very detailed model but lots of time we only want a simple model that relatively closely models what we are trying to mimic.</p>
 <p>The following model roughly approximates the sphape of a neuron firing with some extra additions need to reach a peak.
 $<span class="math notranslate nohighlight">\(R*C \frac{dv}{dt} = -(V - V_{eq}) + RI(t)\)</span><span class="math notranslate nohighlight">\(
@@ -915,7 +910,7 @@ $<span class="math notranslate nohighlight">\(R*C \frac{dv}{dt} = -(V - V_{eq}) 
 </div>
 </div>
 <section id="conceptual-questions">
-<h3><span class="section-number">17.3.1. </span><strong>Conceptual Questions</strong><a class="headerlink" href="#conceptual-questions" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.3.1. </span><strong>Conceptual Questions</strong><a class="headerlink" href="#conceptual-questions" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Describe the key parts of a neuronal membrane that were touched upon in this notebook and roughly describe their circuit component equivalents.</p></li>
 <li><p>Describe how spikes occur due to changes in the <strong>m, n and h</strong> proportion parameters.</p></li>
@@ -964,15 +959,15 @@ $<span class="math notranslate nohighlight">\(R*C \frac{dv}{dt} = -(V - V_{eq}) 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">16. </span>images</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>images</p>
       </div>
     </a>
     <a class="right-next"
-       href="../Chapter_04/00_Relations_Between_Variables.html"
+       href="../Chapter_04/4-fMRI.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">18. </span>Relations Between Variables</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>fMRI</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -994,20 +989,20 @@ $<span class="math notranslate nohighlight">\(R*C \frac{dv}{dt} = -(V - V_{eq}) 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">17.1. <strong>Jupyter Notebooks</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">17.1.1. Numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">4.1. <strong>Jupyter Notebooks</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">4.1.1. Numpy</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biological-neuron-simulations">17.2. <strong>Biological Neuron Simulations</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#action-potential-biology">17.2.1. Action Potential Biology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-gated-channels">17.2.2. Voltage Gated Channels</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hodgkin-huxley-model">17.2.2.1. Hodgkin-Huxley Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biological-neuron-simulations">4.2. <strong>Biological Neuron Simulations</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#action-potential-biology">4.2.1. Action Potential Biology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-gated-channels">4.2.2. Voltage Gated Channels</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hodgkin-huxley-model">4.2.2.1. Hodgkin-Huxley Model</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrate-and-fire">17.3. Integrate and Fire</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">17.3.1. <strong>Conceptual Questions</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrate-and-fire">4.3. Integrate and Fire</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">4.3.1. <strong>Conceptual Questions</strong></a></li>
 </ul>
 </li>
 </ul>
