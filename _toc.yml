@@ -19,9 +19,8 @@ parts:
     - file: content/Chapter_01/1.5-ProblemSolved
   - file: content/Chapter_02/2-Neuroscience
     sections:
-    - file: content/Chapter_02/2.1-Brain
+    - file: content/Chapter_02/2.1-BrainAsAWhole
     - file: content/Chapter_02/2.2-NervousSystem
-    - file: content/Chapter_02/2.2-TheNervoussystem
     - file: content/Chapter_02/2.3-ActionPotential
     - file: content/Chapter_02/2.4-MotorSystems
     - file: content/Chapter_02/2.5-SensorySystems
@@ -31,16 +30,14 @@ parts:
     - file: content/Chapter_03/3.1-Philosophy
     - file: content/Chapter_03/3.2-Perception
     - file: content/Chapter_03/3.3-Attention
+    - file: content/Chapter_03/3.4-Consciousness
     - file: content/Chapter_03/3.5-Learning+Memory
     - file: content/Chapter_03/Neuron_Simulations_NMEP_Sp23
-  - file: content/Chapter_04/00_Relations_Between_Variables
+  - file: content/Chapter_04/4-fMRI
     sections:
-    - file: content/Chapter_04/01_Joint_Distributions
-    - file: content/Chapter_04/02_Examples
-    - file: content/Chapter_04/03_Marginal_Distributions
-    - file: content/Chapter_04/04_Conditional_Distributions
-    - file: content/Chapter_04/05_Dependence_and_Independence
-    - file: content/Chapter_04/06_Exercises
+    - file: content/Chapter_04/4.1-BrainActivity
+    - file: content/Chapter_04/4.2-Data
+    - file: content/Chapter_04/4.3-Examples
   - file: content/Chapter_05/5-EEG
     sections:
     - file: content/Chapter_05/5.1-BrainWaves
