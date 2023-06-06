@@ -6,7 +6,7 @@
 title: NeuroTech Textbook
 author: Parth Desai, Pratyush Das
 email: parthrudesai@berkeley.edu
-logo: content/images/logo/sp22_ugarte_logo.png
+logo: content/images/logo/oohwowlogo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
