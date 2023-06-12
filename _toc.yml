@@ -4,7 +4,7 @@ title: Authors and License
 parts:
 - caption: Introduction
   chapters:
-  - file: content/NMEP_CourseWebpage.html
+  - url: https://postybaloney.github.io/NMEP_CourseWebpage.html
     title: Course Home
   - file: content/NMEP_ToStudent
 - caption: Chapters
