@@ -38,4 +38,4 @@ launch_buttons:
 
 # Navigate to https://analytics.google.com, add a new property for your jupyter book and copy the tracking id here.
 google_analytics:
-  mytrackingcode:
+  mytrackingcode: 5545185939
