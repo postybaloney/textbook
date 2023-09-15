@@ -18,7 +18,7 @@ exclude_patterns: ["LICENSE.md"]
 
 # Favicon
 html:
-  favicon: content/images/favicon/favicon.ico
+  favicon: content/images/favicon/ntablogo.ico
 #######################################################################################
 # Interact link settings
 
