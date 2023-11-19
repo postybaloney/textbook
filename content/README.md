@@ -2,7 +2,7 @@
 
 ## A Formal Introduction to Neurotechnology
 -------------------------------
-**By [Parth Desai](http://linkedin.com/in/parth-desai-70641316b) and [Pratyush Das](http://linkedin.com/in/pratdas)**
+**By [Neda Bahrani](https://www.linkedin.com/in/neda-bahrani-654125186/), [Amelia Lubelska](https://www.linkedin.com/in/amelia-lubelska-548370221/), [Samreena Siddiqui](https://www.linkedin.com/in/samreenasiddiqui/), [Izzie Yu], [Parth Desai](http://linkedin.com/in/parth-desai-70641316b) and [Pratyush Das](http://linkedin.com/in/pratdas)**
 
 This is the textbook for the [Intro to Neurotechnology](http://neurotech.berkeley.edu/) class at UC Berkeley.
 
