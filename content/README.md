@@ -1,12 +1,10 @@
 # Data 140
 
 ## Probability for Data Science
--------------------------------
-<<<<<<< HEAD
-**By [Ani Adhikari](http://statistics.berkeley.edu/people/ani-adhikari) and [Jim Pitman](http://www.stat.berkeley.edu/~pitman/)**
-=======
+
 **By [Neda Bahrani](https://www.linkedin.com/in/neda-bahrani-654125186/), [Amelia Lubelska](https://www.linkedin.com/in/amelia-lubelska-548370221/), [Samreena Siddiqui](https://www.linkedin.com/in/samreenasiddiqui/), [Izzie Yu], [Emily Tu], [Srujana Poluri], [Parth Desai](http://linkedin.com/in/parth-desai-70641316b) and [Pratyush Das](http://linkedin.com/in/pratdas)**
->>>>>>> parent of 12db7e19 (Added Linkedin urls)
+
+
 
 This is the textbook for the [Probability for Data Science](http://prob140.org/) class at UC Berkeley.
 
