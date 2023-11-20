@@ -30,8 +30,8 @@ These steps detail the process you should go through every time you update the t
     - If you added new sections or chapters, update `_toc.yml` as well to reflect your changes.
 3. **Build:** `cd` into the directory above `textbook/` (i.e. `cd ..`) and run `jupyter-book build textbook`.
 4. **Check:** Open the file `textbook/_build/html/index.html` in your browser to view what the textbook will look like with any changes you've made. Make sure nothing is broken and the changes are as you want them. 
-    - See the [Troubleshooting](#troubleshooting) section for any issues you may be having.
-    - Take a look at the [Issues](#issues) for problematic parts of the textbook.
+    - See the Troubleshooting section for any issues you may be having.
+    - Take a look at the Issues for problematic parts of the textbook.
 5. **Deploy:** `cd` back into `textbook/` (`cd textbook/`) and run `ghp-import -n -p -f _build/html` (the `-n` flag is important, since it adds a `.nojekyll` file which allows GitHub to build the website correctly). This will push the `_build/html` folder to the `gh-pages` branch of the textbook repository, which is configured by GitHub Pages to hold the files for the textbook website. To edit these configurations, from the repository page, go to Settings > Pages.
 6. **Push:**  Stage any changes you made (i.e. using `git add [file]`, `git add -u`, `git add .`, etc.), commit your changes with `git commit -m "[description]"` (please include a useful description of any changes you made), and push to the master repository with `git push origin master`.
 
@@ -49,17 +49,5 @@ If changes you've made aren't showing up the HTML after building, sometimes dele
 
 ### Links
 Links to the internet should be done as they are usually done in Markdown. However, to cross-link to other pages of the textbook, there is an internal linking system that should be used instead (since it is robust to file structure changes in `/textbook`). This system is described [here](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels).
-
-For example, Section 12.4 Exercise 3 of the Stat 88 Textbook contains a link to Section 12.2. 
-1. The flag `(ch12.2)=` was added *before* the primary header of the notebook.
-```
-(ch12.2)=
-## The Distribution of the Estimated Slope ##
-```
-2. The link to Section 12.2 was changed to `(ch12.2)`.
-```
-**3.** 
-Refer to the regression of active pulse rate on resting pulse rate in [Section 12.2](ch12.2). Here are the estimated values again, along with some additional data.
-```
 
 Currently, the Data 140 textbook doesn't use this system for cross-linking, but it should eventually be adapted, as it is more robust to modifications to the file structure.

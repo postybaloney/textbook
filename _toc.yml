@@ -4,7 +4,7 @@ title: Authors and License
 parts:
 - caption: Introduction
   chapters:
-  - url: http://prob140.org
+  - url: https://neurotech.berkeley.edu
     title: Course Home
   - file: content/To_the_Student
 - caption: Chapters
@@ -43,17 +43,17 @@ parts:
     - file: content/Chapter_05/5.1-BrainWaves
     - file: content/Chapter_05/5.2-Preprocessing
     # - file: content/Chapter_05/NMEP_Sp23_fMRI_Lab
-  - file: content/Chapter_06/6-Neuroethics
-    sections:
-     - file: content/Chapter_06/6.1-Industry_Key_Players
-     - file: content/Chapter_06/6.2-Ethics
-     - file: content/Chapter_06/6.3-Autonomy
+  # - file: content/Chapter_06/6-Neuroethics
+    # sections:
+     # - file: content/Chapter_06/6.1-Industry_Key_Players
+     # - file: content/Chapter_06/6.2-Ethics
+     # - file: content/Chapter_06/6.3-Autonomy
   - file: content/Chapter_07/7-ExternalLinks
     sections:
-     - file: content/Chapter_02/Python_Introduction
-     - file: content/Chapter_03/Neuron_Simulations_NMEP_Sp23
-     - file: content/Chapter_05/NMEP_Sp23_fMRI_Lab
-  - file: content/Chapter_08/8-AdditionalResources
-    sections:
-     - file: content/Chapter_08/8.1-Links
+     - file: content/Chapter_07/Python_Introduction
+     - file: content/Chapter_07/Neuron_Simulations_NMEP_Sp23
+     - file: content/Chapter_07/NMEP_Sp23_fMRI_Lab
+  # - file: content/Chapter_08/8-AdditionalResources
+    # sections:
+     # - file: content/Chapter_08/8.1-Links
 
