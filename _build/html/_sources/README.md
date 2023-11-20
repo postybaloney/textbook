@@ -1,6 +1,6 @@
-# NeuroTech Textbook
+# Data 140 Textbook
 
-This textbook was built with [Jupyter Books](https://jupyterbook.org/en/stable/intro.html). This README was written by Parth.
+This textbook was built with [Jupyter Books](https://jupyterbook.org/en/stable/intro.html). This README was written by Shahzar.
 
 ## Structure
 

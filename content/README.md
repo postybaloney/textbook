@@ -1,10 +1,10 @@
-# Neurotech at Berkeley
+# Data 140
 
-## A Formal Introduction to Neurotechnology
+## Probability for Data Science
 -------------------------------
-**By [Neda Bahrani](https://www.linkedin.com/in/neda-bahrani-654125186/), [Amelia Lubelska](https://www.linkedin.com/in/amelia-lubelska-548370221/), [Samreena Siddiqui](https://www.linkedin.com/in/samreenasiddiqui/), [Izzie Yu](https://www.linkedin.com/in/izzie-yu/), [Srujana Poluri](https://www.linkedin.com/in/srujana-poluri-289358258/), [Parth Desai](http://linkedin.com/in/parth-desai-70641316b) and [Pratyush Das](http://linkedin.com/in/pratdas)**
+**By [Ani Adhikari](http://statistics.berkeley.edu/people/ani-adhikari) and [Jim Pitman](http://www.stat.berkeley.edu/~pitman/)**
 
-This is the textbook for the [Intro to Neurotechnology](http://neurotech.berkeley.edu/) class at UC Berkeley.
+This is the textbook for the [Probability for Data Science](http://prob140.org/) class at UC Berkeley.
 
 
 

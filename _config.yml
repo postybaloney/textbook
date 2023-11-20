@@ -3,10 +3,10 @@
 
 #######################################################################################
 # Book settings
-title: NeuroTech  Textbook
-author: Neda Bahrani, Amelia Lubelska, Samreena Siddiqui, Izzie Yu, Emily Tu, Srujana Poluri, Parth Desai, Pratyush Das
-email: parthrudesai@berkeley.edu
-logo: content/images/logo/oohwowlogo.png
+title: Data 140 Textbook
+author: Ani Adhikari
+email: adhikari@berkeley.edu
+logo: content/images/logo/sp22_ugarte_logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -18,13 +18,13 @@ exclude_patterns: ["LICENSE.md"]
 
 # Favicon
 html:
-  favicon: content/images/favicon/ntablogo.ico
+  favicon: content/images/favicon/favicon.ico
 #######################################################################################
 # Interact link settings
 
 # Repository information
 repository: 
-  url: https://github.com/postybaloney/textbook
+  url: https://github.com/prob140/textbook 
   branch: gh-pages
 
 # Tells Jupyter Book to add JupyterHub links to pages
@@ -38,4 +38,4 @@ launch_buttons:
 
 # Navigate to https://analytics.google.com, add a new property for your jupyter book and copy the tracking id here.
 google_analytics:
-  mytrackingcode: 5545185939
+  mytrackingcode:
