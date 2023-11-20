@@ -24,7 +24,7 @@ parts:
     - file: content/Chapter_02/2.3-ActionPotential
     - file: content/Chapter_02/2.4-MotorSystems
     - file: content/Chapter_02/2.5-SensorySystems
-    - file: content/Chapter_02/Python_Introduction
+    # - file: content/Chapter_02/Python_Introduction
   - file: content/Chapter_03/3-Cognition
     sections:
     - file: content/Chapter_03/3.1-Philosophy
@@ -32,7 +32,7 @@ parts:
     - file: content/Chapter_03/3.3-Attention
     - file: content/Chapter_03/3.4-Consciousness
     - file: content/Chapter_03/3.5-Learning+Memory
-    - file: content/Chapter_03/Neuron_Simulations_NMEP_Sp23
+    # - file: content/Chapter_03/Neuron_Simulations_NMEP_Sp23
   - file: content/Chapter_04/4-fMRI
     sections:
     - file: content/Chapter_04/4.1-BrainActivity
@@ -42,18 +42,18 @@ parts:
     sections:
     - file: content/Chapter_05/5.1-BrainWaves
     - file: content/Chapter_05/5.2-Preprocessing
-    - file: content/Chapter_05/NMEP_Sp23_fMRI_Lab
-   - file: content/Chapter_06/6-Neuroethics
-     sections:
+    # - file: content/Chapter_05/NMEP_Sp23_fMRI_Lab
+  - file: content/Chapter_06/6-Neuroethics
+    sections:
      - file: content/Chapter_06/6.1-Industry_Key_Players
      - file: content/Chapter_06/6.2-Ethics
      - file: content/Chapter_06/6.3-Autonomy
-   - file: content/Chapter_07/7-ExternalLinks
-     sections:
+  - file: content/Chapter_07/7-ExternalLinks
+    sections:
      - file: content/Chapter_02/Python_Introduction
      - file: content/Chapter_03/Neuron_Simulations_NMEP_Sp23
      - file: content/Chapter_05/NMEP_Sp23_fMRI_Lab
-   - file: content/Chapter_08/8-AdditionalResources
-     sections:
+  - file: content/Chapter_08/8-AdditionalResources
+    sections:
      - file: content/Chapter_08/8.1-Links
 

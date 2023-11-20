@@ -50,7 +50,7 @@ If changes you've made aren't showing up the HTML after building, sometimes dele
 ### Links
 Links to the internet should be done as they are usually done in Markdown. However, to cross-link to other pages of the textbook, there is an internal linking system that should be used instead (since it is robust to file structure changes in `/textbook`). This system is described [here](https://jupyterbook.org/en/stable/content/references.html#reference-section-labels).
 
-For example, Section 12.4 Exercise 3 of the [Stat 88 Textbook](stat88.org/textbook) contains a link to Section 12.2. 
+For example, Section 12.4 Exercise 3 of the Stat 88 Textbook contains a link to Section 12.2. 
 1. The flag `(ch12.2)=` was added *before* the primary header of the notebook.
 ```
 (ch12.2)=
